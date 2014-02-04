@@ -194,6 +194,7 @@ else:
     screen.blit(text, textRect)
 while 1:
     for event in pygame.event.get():
+    	print("TEST")
         if event.type == pygame.QUIT:
             pygame.quit()
             exit(0)
