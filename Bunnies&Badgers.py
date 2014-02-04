@@ -3,7 +3,7 @@ import pygame
 from pygame.locals import *
 import math
 import random
- 
+
 # 2 - Initialize the game
 pygame.init()
 width, height = 640, 480
@@ -17,7 +17,7 @@ badtimer1=0
 badguys=[[640,100]]
 healthvalue=194
 pygame.mixer.init()
- 
+
 # 3 - Load images
 player = pygame.image.load("resources/images/dude.png")
 grass = pygame.image.load("resources/images/grass.png")
@@ -39,7 +39,7 @@ shoot.set_volume(0.05)
 pygame.mixer.music.load('resources/audio/moonlight.wav')
 pygame.mixer.music.play(-1, 0.0)
 pygame.mixer.music.set_volume(0.25)
- 
+
 # 4 - keep looping through
 running = 1
 exitcode = 0
@@ -125,10 +125,10 @@ while running:
     pygame.display.flip()
     # 8 - loop through the events
     for event in pygame.event.get():
-        # check if the event is the X button 
+        # check if the event is the X button
         if event.type==pygame.QUIT:
             # if it is quit the game
-            pygame.quit() 
+            pygame.quit()
             exit(0)
         if event.type == pygame.KEYDOWN:
             if event.key==K_w:
@@ -173,7 +173,7 @@ while running:
         accuracy=round(acc[0]*1.0/acc[1]*100,2)
     else:
         accuracy=0
-# 11 - Win/lose display        
+# 11 - Win/lose display
 if exitcode==0:
     pygame.font.init()
     font = pygame.font.Font(None, 24)
